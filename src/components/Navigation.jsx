@@ -12,7 +12,7 @@ const Navbar = () => {
     window.addEventListener("resize", checkScreen);
     return () => window.removeEventListener("resize", checkScreen);
   }, []);
-
+ 
   const scrollToSection = (id) => {
     const section = document.getElementById(id.replace(/\s+/g, "-"));
     if (section) {
