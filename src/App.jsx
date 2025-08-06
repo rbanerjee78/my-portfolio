@@ -1,4 +1,4 @@
-import Navigation from "./components/navigation";
+import Navigation from "./components/Navigation";
 import Home from "./sections/Home";
 import MyWork from "./sections/Mywork";
 import About from "./sections/About";
