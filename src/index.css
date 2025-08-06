@@ -1,0 +1,97 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  height: 100%;
+  font-family: 'Inter', sans-serif;
+}
+
+#root {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-padding-top: 0;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin: 0;
+}
+
+
+section {
+  scroll-snap-align: start;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes float {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+/* styles.css */
+.cubes-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 3.2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.skills-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .skills-section {
+    flex-direction: column; /* Still column, but heading stays on top */
+  }
+
+  .heading {
+    order: 0;
+  }
+
+  .cubes-container {
+    order: 1;
+  }
+}
+
+@media (min-width: 480px) {
+  .cubes-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for mobile */
+  }
+}
+
+@media (max-width: 767px) {
+  .skills-section {
+    flex-direction: column;
+  }
+
+  .heading {
+    order: 0; /* Ensure heading appears first */
+    width: 100%;
+    text-align: center;
+  }
+
+  .cubes-container {
+    order: 1;
+  }
+}
+

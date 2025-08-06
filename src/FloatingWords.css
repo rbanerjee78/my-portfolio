@@ -1,0 +1,17 @@
+ .scene {
+      width: 100vw;
+      height: 100vh;
+      transform-style: preserve-3d;
+      position: relative;
+    }
+
+ .word {
+  position: absolute;
+  color: #333;
+  font-size: 1.2rem;
+  font-weight: bold;
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+  transition: transform 0.1s linear;
+}
