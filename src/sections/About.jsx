@@ -42,6 +42,30 @@ const timelineData = [
     description:
       "Created interfaces for cybersecurity products, focusing on user-friendly designs and enhancing user experience.",
   },
+    {
+    type: "experience",
+    title: "Senior UI/UX Developer",
+    company: "Walker Digital",
+    duration: "Jan 2017 – Sep 2018",
+    description:
+      "Created interfaces for casino management software, concentrating on user-friendly designs and enhancing user experience.",
+  },
+   {
+    type: "experience",
+    title: "Senior UI/UX Developer",
+    company: "WebVirtue Technology",
+    duration: "Jan 2016 – Sep 2016",
+    description:
+      "Created interfaces for ecommerce catalog management software, focusing on user-friendly designs and enhancing user experience.",
+  },
+   {
+    type: "experience",
+    title: "Senior UI/UX Designer",
+    company: "TrilaSoft Solutions",
+    duration: "Nov 2008 – Dec 2016",
+    description:
+      "Created interfaces for Logistics and Supply Chain Management software, focusing on user-friendly designs and enhancing user experience.",
+  },
   {
     type: "education",
     title: "GNIIT PG Diplma",
@@ -169,7 +193,7 @@ export default function AboutMe() {
           }}
         >
           <p>
-            I'm a passionate UI/UX Designer and Developer with over 5 years of experience in building
+            I'm a passionate UI/UX Designer and Developer with over 16 years of experience in building
             intuitive, beautiful, and scalable user interfaces. I specialize in crafting digital experiences
             that bridge design with code.
           </p>
