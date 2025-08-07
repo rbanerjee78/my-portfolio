@@ -64,12 +64,12 @@ export default function Skills() {
         targets: cubesRef.current,
         opacity: [0, 1],
         scale: [0.3, 1.2, 1],
-        rotateX: [90, 0],
-        rotateZ: [-45, 0],
+        translateX: [90, 0],
         translateY: [100, 0],
         easing: "easeOutElastic(1, .6)",
         duration: 1800,
-        delay: anime.stagger(200, { from: "center" }),
+        delay: anime.stagger(200, { from: "center" }), 
+
       });
     };
 
@@ -103,6 +103,7 @@ export default function Skills() {
     <section
       id="skills"
       className="skills-section"
+      ref={containerRef}
       style={{
         background: "linear-gradient(135deg, #f0fdf4, #dcfce7)",
         color: "#111",
@@ -111,6 +112,7 @@ export default function Skills() {
         minHeight: "100vh",
         position: "relative",
         zIndex: 1,
+        
       }}
     >
       <h1
@@ -142,7 +144,7 @@ export default function Skills() {
 
       <div
         className="cubes-container"
-        ref={containerRef}
+        
         style={{
           display: "grid",
           gridTemplateColumns: isMobile
