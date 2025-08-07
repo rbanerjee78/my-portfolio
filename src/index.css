@@ -36,7 +36,7 @@ section {
   position: relative;
   display: inline-block;
   padding-bottom: 4px;
-  color: #111;
+  color: #333;
   text-decoration: none;
   text-transform: capitalize;
   font-weight: 500;
@@ -51,7 +51,7 @@ section {
   bottom: 0;
   height: 2px;
   width: 0%;
-  background-color: #111;
+  background-color: #d50000;
   transition: width 0.3s ease;
 }
 
