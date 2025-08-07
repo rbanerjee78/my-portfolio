@@ -100,7 +100,7 @@ export default function MyWork() {
 
   return (
     <section
-      id="mywork"
+      id="work"
       style={{
         position: "relative",
         minHeight: "100vh", // changed from height
