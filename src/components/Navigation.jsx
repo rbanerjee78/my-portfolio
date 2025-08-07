@@ -92,12 +92,13 @@ const Navbar = () => {
             top: "60px",
             left: 0,
             right: 0,
-            background: "rgba(255,255,255,0.5)",
+            background: "rgba(255,255,255,0.8)",
             backdropFilter: "blur(8px)",
             WebkitBackdropFilter: "blur(8px)",
             boxShadow: "0 4px 20px rgba(0,0,0,0.1)",
             padding: "1rem 0",
             pointerEvents: "auto",
+            height: "calc(100vh - 60px)",
           }}
         >
           {links.map((link) => (
@@ -115,7 +116,7 @@ const Navbar = () => {
                 textDecoration: "none",
                 color: "#111",
                 fontWeight: 500,
-                fontSize: "1rem",
+                fontSize: "3rem",
                 textTransform: "capitalize",
               }}
             >

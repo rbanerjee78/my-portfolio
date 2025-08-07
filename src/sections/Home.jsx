@@ -34,12 +34,13 @@ export default function Home() {
 
     Object.assign(el.style, {
       position: "absolute",
-      color: "rgba(86, 86, 86, 0.7)",
+      color: "rgba(57, 57, 57, 0.3)",
       fontWeight: "600",
       fontSize: "14px",
       whiteSpace: "nowrap",
       transform: `translate3d(${x}px, ${y}px, ${z}px)`,
       transition: "transform 0.2s ease-out",
+      filter: "blur(1px)",
     });
 
     scene.appendChild(el);
