@@ -163,7 +163,7 @@ overflow: "hidden",
             onMouseOut={(e) => e.currentTarget.style.transform = "scale(1)"}
              onClick={(e) => {
       e.preventDefault();
-      const section = document.getElementById("mywork");
+      const section = document.getElementById("work");
       if (section) {
         section.scrollIntoView({ behavior: "smooth" });
       }
