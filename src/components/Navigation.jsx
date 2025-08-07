@@ -74,13 +74,8 @@ const Navbar = () => {
                   e.preventDefault();
                   scrollToSection(link);
                 }}
-                style={{
-                  textDecoration: "none",
-                  textTransform: "capitalize",
-                  color: "#111",
-                  fontWeight: 500,
-                  fontSize: "1rem",
-                }}
+                className="nav-link"
+
               >
                 {link}
               </a>
