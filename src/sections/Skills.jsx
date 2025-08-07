@@ -97,6 +97,8 @@ export default function Skills() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  
+
   const headingText = "My Skills";
 
   return (
