@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -49,7 +50,7 @@ const Navbar = () => {
           pointerEvents: "auto", // allow interactions inside nav
         }}
       >
-        <div style={{ fontWeight: "bold", fontSize: "1.25rem" }}>Rahul Banerjee Portfolio</div>
+        <div style={{ fontWeight: "bold", fontSize: "1.25rem" }}><Link to="/" style={{textDecoration:"none", color:"#000"}}>Rahul Banerjee Portfolio</Link></div>
 
         {isMobile ? (
           <button
@@ -92,10 +93,9 @@ const Navbar = () => {
             top: "60px",
             left: 0,
             right: 0,
-            background: "rgba(255,255,255,0.8)",
-            backdropFilter: "blur(8px)",
-            WebkitBackdropFilter: "blur(8px)",
-            boxShadow: "0 4px 20px rgba(0,0,0,0.1)",
+            background: "rgba(255,255,255,0.9)",
+            backdropFilter: "blur(10px)",
+            WebkitBackdropFilter: "blur(10px)",           
             padding: "1rem 0",
             pointerEvents: "auto",
             height: "calc(100vh - 60px)",
@@ -116,7 +116,7 @@ const Navbar = () => {
                 textDecoration: "none",
                 color: "#111",
                 fontWeight: 500,
-                fontSize: "3rem",
+                fontSize: "2rem",
                 textTransform: "capitalize",
               }}
             >
