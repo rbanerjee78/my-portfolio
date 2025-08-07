@@ -23,8 +23,7 @@ export default function Contact() {
       id="contact"
       ref={containerRef}
       style={{
-        backgroundImage:
-          "linear-gradient(to bottom, #ab2aef, #9f45f5, #9457f8, #8a66fa, #8272fb, #8c81fc, #9790fc, #a29efb, #bcb5fc, #d3cdfe, #eae6ff, #ffffff)",
+        background: "linear-gradient(135deg, #fefce8, #fef9c3)",
         padding: "40px 20px",
       }}
     >

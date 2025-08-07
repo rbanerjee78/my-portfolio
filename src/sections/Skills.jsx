@@ -1,5 +1,5 @@
 // Keep your imports as they are
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import anime from "animejs/lib/anime.es.js";
 
 import reactSVG from "../assets/react.svg";
@@ -27,24 +27,10 @@ const skills = [
 export default function Skills() {
   const cubesRef = useRef([]);
   const headingRef = useRef(null);
+  const containerRef = useRef(null);
+  const [isMobile, setIsMobile] = useState(false);
 
-  useEffect(() => {
-  anime({
-      targets: cubesRef.current,
-      opacity: [0, 1],
-      scale: [0.3, 1.2, 1],
-      rotateX: [90, 0],
-      rotateZ: [-45, 0],
-      translateY: [100, 0],
-      easing: "easeOutElastic(1, .6)",
-      duration: 1800,
-      delay: anime.stagger(200, { from: "center" }),
-    });
-
-  }, []);
-
-  const headingText = "My Skills";
-
+  // Animate heading letters
   useEffect(() => {
     const letters = headingRef.current.querySelectorAll(".letter");
 
@@ -67,49 +53,58 @@ export default function Skills() {
       { threshold: 0.5 }
     );
 
-    if (headingRef.current) {
-      observer.observe(headingRef.current);
-    }
-
+    if (headingRef.current) observer.observe(headingRef.current);
     return () => observer.disconnect();
   }, []);
 
-   useEffect(() => {
+  // Animate skill cubes on enter viewport
+  useEffect(() => {
+    const animateCubes = () => {
+      anime({
+        targets: cubesRef.current,
+        opacity: [0, 1],
+        scale: [0.3, 1.2, 1],
+        rotateX: [90, 0],
+        rotateZ: [-45, 0],
+        translateY: [100, 0],
+        easing: "easeOutElastic(1, .6)",
+        duration: 1800,
+        delay: anime.stagger(200, { from: "center" }),
+      });
+    };
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           animateCubes();
+          observer.disconnect(); // prevent repeat animation
         }
       },
       { threshold: 0.3 }
     );
 
-    const target = document.querySelector(".cubes-container");
-    if (target) observer.observe(target);
-
+    if (containerRef.current) observer.observe(containerRef.current);
     return () => observer.disconnect();
   }, []);
 
+  // Handle mobile responsiveness
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
-  const [isMobile, setIsMobile] = React.useState(false);
-
-useEffect(() => {
-  const handleResize = () => {
-    setIsMobile(window.innerWidth < 768);
-  };
-
-  handleResize(); // set on mount
-  window.addEventListener("resize", handleResize);
-  return () => window.removeEventListener("resize", handleResize);
-}, []);
-
+  const headingText = "My Skills";
 
   return (
     <section
       id="skills"
       className="skills-section"
       style={{
-       backgroundImage: "linear-gradient(to top, #ab2aef, #9f45f5, #9457f8, #8a66fa, #8272fb, #8c81fc, #9790fc, #a29efb, #bcb5fc, #d3cdfe, #eae6ff, #ffffff)",
+        background: "linear-gradient(135deg, #f0fdf4, #dcfce7)",
         color: "#111",
         padding: "4rem 1.5rem",
         scrollSnapAlign: "start",
@@ -144,19 +139,23 @@ useEffect(() => {
           </span>
         ))}
       </h1>
+
       <div
-  className="cubes-container"
-  style={{
-    display: "grid",
-    gridTemplateColumns: isMobile ? "2fr" : "repeat(auto-fit, minmax(140px, 1fr))",
-    gap: "3.2rem",
-    maxWidth: "900px",
-    margin: "0 auto",
-    padding: "0 1rem",
-    position: "relative",
-    zIndex: 2,
-  }}
->
+        className="cubes-container"
+        ref={containerRef}
+        style={{
+          display: "grid",
+          gridTemplateColumns: isMobile
+            ? "repeat(2, 1fr)"
+            : "repeat(auto-fit, minmax(140px, 1fr))",
+          gap: "3.2rem",
+          maxWidth: "900px",
+          margin: "0 auto",
+          padding: "0 1rem",
+          position: "relative",
+          zIndex: 2,
+        }}
+      >
         {skills.map((skill, i) => (
           <div
             key={i}
@@ -164,7 +163,7 @@ useEffect(() => {
             className="skill-cube"
             style={{
               width: "clamp(120px, 20vw, 180px)",
-              height: "clamp(140px, 22vw, 200px)", // a little taller to fit text
+              height: "clamp(140px, 22vw, 200px)",
               background: "#ffffff",
               borderRadius: 20,
               boxShadow: "0 8px 24px rgba(52,211,153,0.2)",
@@ -179,6 +178,7 @@ useEffect(() => {
               willChange: "transform",
               textAlign: "center",
               padding: "1rem",
+              opacity: 0, // for animation start
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.transform =
@@ -215,7 +215,6 @@ useEffect(() => {
           </div>
         ))}
       </div>
-    
     </section>
   );
 }

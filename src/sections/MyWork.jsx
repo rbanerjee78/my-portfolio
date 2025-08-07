@@ -104,8 +104,9 @@ export default function MyWork() {
       style={{
         position: "relative",
         minHeight: "100vh", // changed from height
+        paddingTop: "4rem",
         scrollSnapAlign: "start",
-        background: "#f3f4f6",
+       background: "linear-gradient(135deg, #e2e8f0, #cbd5e1)",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",

@@ -87,7 +87,7 @@ export default function Home() {
       style={{
         height: "100vh",
         scrollSnapAlign: "start",
-backgroundImage: "linear-gradient(to top, #ffffff, #ede8ff, #ded0ff, #d1b7ff, #c69eff, #c890fa, #cc82f4, #d072ec, #dd6ce2, #e967d7, #f363cb, #fb5fbf)",
+background: "linear-gradient(135deg, #ffedd5, #fecaca)",
 overflow: "hidden",
         position: "relative",
         display: "flex",
@@ -139,8 +139,10 @@ overflow: "hidden",
           marginBottom: "1.5rem",
           animation: "float 3s ease-in-out infinite"
         }}>
-          Hi, I'm Rahul — Product Designer & Developer
+         Hi, I'm Rahul — Product Designer & Developer
+
         </h1>
+        <p> <i>I build thoughtful solutions to real-world problems.</i></p>
 
         <div style={{
           display: "flex",

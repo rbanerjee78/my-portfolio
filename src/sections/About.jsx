@@ -133,7 +133,7 @@ export default function AboutMe() {
       id="about"
       style={{
         minHeight: "100vh",
-        background: "#f9fafb",
+       background: "linear-gradient(135deg, #fefce8, #fef9c3)",
         padding: "4rem 1.5rem",
         scrollSnapAlign: "start",
         scrollPadding: "4rem",
