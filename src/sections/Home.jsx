@@ -149,7 +149,7 @@ overflow: "hidden",
           flexWrap: "wrap",
           marginTop: "2rem",
         }}>
-          <a href="#mywork" style={{
+          <a href="#work" style={{
             padding: "12px 28px",
             background: "#111",
             color: "#fff",
