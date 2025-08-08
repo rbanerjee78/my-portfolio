@@ -152,7 +152,7 @@ export default function Skills() {
           gridTemplateColumns: isMobile
             ? "repeat(2, 1fr)"
             : "repeat(auto-fit, minmax(140px, 1fr))",
-          gap: "3rem",
+          gap: "2rem",
           maxWidth: "900px",
           margin: "0 auto",
           padding: "0 1rem",

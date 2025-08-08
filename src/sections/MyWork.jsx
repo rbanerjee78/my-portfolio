@@ -47,7 +47,7 @@ export default function MyWork() {
           observer.disconnect();
         }
       },
-      { threshold: 0.6 }
+      { threshold: 0.1 }
     );
 
     if (headingRef.current) observer.observe(headingRef.current);
