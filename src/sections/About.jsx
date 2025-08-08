@@ -74,6 +74,14 @@ const timelineData = [
     description:
       "Global curriculum in software engineering, covering programming languages, database management, and web development.",
   },
+   {
+    type: "education",
+    title: "Human Computer Interaction",
+    company: "Interaction Design Foundation (IDF), Denmark",
+    duration: "2022 – 2023",
+    description:
+      "Comprehensive course on user-centered design principles, usability testing, and interaction design methodologies.",
+  },
   {
     type: "education",
     title: "React Specialization Certification",

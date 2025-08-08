@@ -64,8 +64,8 @@ export default function Skills() {
         targets: cubesRef.current,
         opacity: [0, 1],
         scale: [0.3, 1.2, 1],
-        translateX: [90, 0],
-        translateY: [100, 0],
+        translateX: [0, 0],
+        translateY: [10, 0],
         easing: "easeOutElastic(1, .6)",
         duration: 1800,
         delay: anime.stagger(200, { from: "center" }), 
@@ -152,7 +152,7 @@ export default function Skills() {
           gridTemplateColumns: isMobile
             ? "repeat(2, 1fr)"
             : "repeat(auto-fit, minmax(140px, 1fr))",
-          gap: "3.2rem",
+          gap: "3rem",
           maxWidth: "900px",
           margin: "0 auto",
           padding: "0 1rem",
@@ -166,8 +166,8 @@ export default function Skills() {
             ref={(el) => (cubesRef.current[i] = el)}
             className="skill-cube"
             style={{
-              width: "clamp(120px, 20vw, 180px)",
-              height: "clamp(140px, 22vw, 200px)",
+              width: "clamp(120px, 20vw, 140px)",
+              height: "clamp(140px, 22vw, 140px)",
               background: "#ffffff",
               borderRadius: 20,
               boxShadow: "0 8px 24px rgba(52,211,153,0.2)",
@@ -181,7 +181,7 @@ export default function Skills() {
               transformStyle: "preserve-3d",
               willChange: "transform",
               textAlign: "center",
-              padding: "1rem",
+              padding: "0.5rem",
               opacity: 0, // for animation start
             }}
             onMouseEnter={(e) => {
@@ -201,8 +201,8 @@ export default function Skills() {
               src={skill.icon}
               alt={skill.name}
               style={{
-                width: "60%",
-                height: "60%",
+                width: "30%",
+                height: "30%",
                 objectFit: "contain",
                 marginBottom: "0.5rem",
               }}
