@@ -19,7 +19,7 @@ export default function Home() {
     minWidth: 200.0,
     scale: 1.0,
     scaleMobile: 1.0,
-    points: 12.0,
+    points: 6.0,
     maxDistance: 20.0,
     spacing: 20.0,
     color: 0x222222,      // Dark grey line color
