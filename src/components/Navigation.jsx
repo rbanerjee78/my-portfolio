@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
+
 
 const Navbar = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -50,7 +52,7 @@ const Navbar = () => {
           pointerEvents: "auto", // allow interactions inside nav
         }}
       >
-        <div style={{ fontWeight: "bold", fontSize: "1.25rem" }}><Link to="/" style={{textDecoration:"none", color:"#000"}}>Rahul Banerjee Portfolio</Link></div>
+        <div style={{ fontWeight: "bold", fontSize: "1.25rem" }}><HashLink smooth to="#home" style={{textDecoration:"none", color:"#000"}}>Rahul Banerjee Portfolio</HashLink></div>
 
         {isMobile ? (
           <button
