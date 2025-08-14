@@ -7,28 +7,53 @@ export default function Home() {
   const vantaRef = useRef(null);
   const [vantaEffect, setVantaEffect] = useState(null);
 
+  // Animation trigger state
+  const [animate, setAnimate] = useState(false);
+  const sectionRef = useRef(null);
+
+  // Intersection Observer to trigger animation on every scroll into view
+  useEffect(() => {
+    let timeout;
+    const observer = new window.IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setAnimate(false); // Reset
+          clearTimeout(timeout);
+          timeout = setTimeout(() => setAnimate(true), 10); // Restart animation
+        } else {
+          setAnimate(false); // Reset when out of view so it can re-trigger
+        }
+      },
+      { threshold: 0.5 }
+    );
+    if (sectionRef.current) observer.observe(sectionRef.current);
+    return () => {
+      observer.disconnect();
+      clearTimeout(timeout);
+    };
+  }, []);
+
   useEffect(() => {
     if (!vantaEffect) {
-    setVantaEffect(
-  NET({
-    el: vantaRef.current,
-    THREE,
-    mouseControls: true,
-    touchControls: true,
-    minHeight: 200.0,
-    minWidth: 200.0,
-    scale: 1.0,
-    scaleMobile: 1.0,
-    points: 6.0,
-    maxDistance: 20.0,
-    spacing: 20.0,
-    color: 0x222222,      // Dark grey line color
-    color2: 0x222222,     // Dark grey dot color
-    backgroundAlpha: 0,   // Transparent background
-    backgroundColor: 0xffedd5 // Required, but alpha hides it
-  })
-);
-
+      setVantaEffect(
+        NET({
+          el: vantaRef.current,
+          THREE,
+          mouseControls: true,
+          touchControls: true,
+          minHeight: 200.0,
+          minWidth: 200.0,
+          scale: 1.0,
+          scaleMobile: 0.5,
+          points: 6.0,
+          maxDistance: 20.0,
+          spacing: 20.0,
+          color: 0x222222,      // Dark grey line color
+          color2: 0x222222,     // Dark grey dot color
+          backgroundAlpha: 0,   // Transparent background
+          backgroundColor: 0xffedd5 // Required, but alpha hides it
+        })
+      );
     }
     return () => {
       if (vantaEffect) vantaEffect.destroy();
@@ -38,7 +63,7 @@ export default function Home() {
   return (
     <section
       id="home"
-     
+      ref={sectionRef}
       style={{
         height: "100vh",
         scrollSnapAlign: "start",
@@ -54,7 +79,17 @@ export default function Home() {
       }}
     >
       {/* Canvas Background */}
-<div ref={vantaRef} style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", zIndex: 1 }} />
+      <div
+        ref={vantaRef}
+        style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100%",
+          zIndex: 1,
+        }}
+      />
       {/* Foreground Content */}
       <div style={{ position: "relative", zIndex: 2 }}>
         <img
@@ -81,12 +116,29 @@ export default function Home() {
             backgroundSize: "800% 800%",
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",
-            animation: "gradientMove 15s ease infinite",
+            animation: animate
+              ? "gradientMove 15s ease infinite, fadeSlideIn 1.5s ease forwards"
+              : "none",
             marginBottom: "1.5rem",
+            opacity: animate ? 0 : 0,
+            transform: animate ? "translateY(20px)" : "translateY(20px)",
           }}
         >
           Hi, I'm Rahul — Product Designer & Developer
         </h1>
+
+        <p
+          style={{
+            animation: animate
+              ? "fadeSlideIn 1.5s ease forwards"
+              : "none",
+            animationDelay: animate ? "0.8s" : "0s",
+            opacity: animate ? 0 : 0,
+            transform: animate ? "translateY(20px)" : "translateY(20px)",
+          }}
+        >
+          <i>I build thoughtful solutions to real-world problems.</i>
+        </p>
 
         <style>
           {`
@@ -95,12 +147,15 @@ export default function Home() {
               50% { background-position: 100% 50%; }
               100% { background-position: 0% 50%; }
             }
+
+            @keyframes fadeSlideIn {
+              to {
+                opacity: 1;
+                transform: translateY(0);
+              }
+            }
           `}
         </style>
-
-        <p>
-          <i>I build thoughtful solutions to real-world problems.</i>
-        </p>
 
         <div
           style={{
