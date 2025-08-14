@@ -1,10 +1,11 @@
 import { useEffect, useRef } from "react";
 import anime from "animejs";
+import { Mail, Phone, Linkedin } from "lucide-react"; // Icons
 
 export default function Contact() {
   const containerRef = useRef(null);
   const elementsRef = useRef([]);
-  const hasAnimated = useRef(false); // To prevent re-triggering instantly again
+  const hasAnimated = useRef(false);
 
   const animateContact = () => {
     anime({
@@ -26,16 +27,14 @@ export default function Contact() {
           animateContact();
           hasAnimated.current = true;
 
-          // Reset animation after a delay to allow re-triggering
           setTimeout(() => {
             elementsRef.current.forEach((el) => {
               if (el) {
                 el.style.opacity = 1;
-               // el.style.transform = "scale(0.3) translateY(40px)";
               }
             });
             hasAnimated.current = false;
-          }, 2000); // Retrigger cooldown (optional)
+          }, 2000);
         }
       },
       { threshold: 0.3 }
@@ -105,34 +104,70 @@ export default function Contact() {
         >
           Feel free to reach out for collaborations, freelance work, or just to say hello!
         </p>
-
-        <div
-          ref={(el) => (elementsRef.current[contactBlockIndex] = el)}
+<div
+  ref={(el) => (elementsRef.current[contactBlockIndex] = el)}
+  style={{
+    marginTop: "30px",
+    display: "flex",
+    justifyContent: "center",
+    flexWrap: "wrap",
+    gap: "30px",
+    opacity: 0,
+  }}
+>
+  {[
+    { icon: <Mail size={20} />, text: "rahulorama@gmail.com", link: "mailto:rahulorama@gmail.com" },
+    { icon: <Phone size={20} />, text: "+91 89209 65371", link: "tel:+918920965371" },
+    { icon: <Linkedin size={20} />, text: "linkedin.com/in/uidevx", link: "https://linkedin.com/in/uidevx" },
+  ].map((item, index) => (
+    <div key={index} style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+      {item.icon}
+      <a
+        href={item.link}
+        target={item.link.startsWith("http") ? "_blank" : undefined}
+        rel="noopener noreferrer"
+        style={{
+          color: "#000",
+          position: "relative",
+          textDecoration: "none",
+          fontWeight: 500,
+        }}
+        onMouseEnter={(e) => {
+          e.target.style.setProperty("--underline-width", "100%");
+        }}
+        onMouseLeave={(e) => {
+          e.target.style.setProperty("--underline-width", "0%");
+        }}
+      >
+        <span
           style={{
-            marginTop: "30px",
-            lineHeight: "2",
-            opacity: 0,
+            position: "relative",
+            display: "inline-block",
+            "--underline-width": "0%",
+            transition: "--underline-width 0.3s ease",
           }}
         >
-          <p>
-            <strong>Email:</strong>{" "}
-            <a href="mailto:rahulorama@gmail.com">rahulorama@gmail.com</a>
-          </p>
-          <p>
-            <strong>Phone:</strong>{" "}
-            <a href="tel:+918920965371">+91 89209 65371</a>
-          </p>
-          <p>
-            <strong>LinkedIn:</strong>{" "}
-            <a
-              href="https://linkedin.com/in/uidevx"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              linkedin.com/in/uidevx
-            </a>
-          </p>
-        </div>
+          {item.text}
+          <span
+            style={{
+              position: "absolute",
+              left: 0,
+              bottom: "-2px",
+              height: "1.5px",
+              width: "var(--underline-width)",
+              backgroundColor: "#7c0000ff",
+              transition: "width 0.3s ease",
+            }}
+          ></span>
+        </span>
+      </a>
+    </div>
+  ))}
+</div>
+
+
+
+
       </div>
     </section>
   );

@@ -11,8 +11,10 @@
   },
   "dependencies": {
     "animejs": "^3.2.1",
+    "lucide-react": "^0.539.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "react-fullpage": "^0.1.19",
     "react-router-dom": "^7.7.1",
     "react-router-hash-link": "^2.4.3",
     "react-top-loading-bar": "^3.0.2",
