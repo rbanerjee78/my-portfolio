@@ -68,7 +68,7 @@ const timelineData = [
   },
   {
     type: "education",
-    title: "GNIIT PG Diplma",
+    title: "GNIIT PG Diploma",
     company: "NIIT Delhi",
     duration: "1997 – 2000",
     description:
@@ -77,7 +77,7 @@ const timelineData = [
    {
     type: "education",
     title: "Human Computer Interaction",
-    company: "Interaction Design Foundation (IDF), Denmark",
+    company: "Interaction Design Foundation (IxDF), Denmark",
     duration: "2022 – 2023",
     description:
       "Comprehensive course on user-centered design principles, usability testing, and interaction design methodologies.",
