@@ -1,11 +1,11 @@
 import React, { useEffect, useRef } from "react";
 import anime from "animejs";
-import voltreumImg from "../assets/voltreum.png";
-import icanpeImg from "../assets/icanpe.png";
-import eventsImg from "../assets/events.png";
-import finantaImg from "../assets/finanta.png";
-import harteImg from "../assets/hartehanks.png";
-import homepointImg from "../assets/homepoint.png";
+import voltreumImg from "../assets/voltreum.webp";
+import icanpeImg from "../assets/icanpe.webp";
+import eventsImg from "../assets/events.webp";
+import finantaImg from "../assets/finanta.webp";
+import harteImg from "../assets/hartehanks.webp";
+import homepointImg from "../assets/homepoint.webp";
 
 export default function MyWork() {
   const headingRef = useRef(null);

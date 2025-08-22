@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import headshotImg from "../assets/headshot.png";
+import headshotImg from "../assets/headshot.webp";
 import * as THREE from "three";
 import NET from "vanta/dist/vanta.net.min.js";
 
