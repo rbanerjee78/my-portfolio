@@ -45,15 +45,16 @@ const Preloader = ({ progress }) => {
               marginBottom: "12px",
             }}
           >
-            <motion.div
-              style={{
-                height: "100%",
-                background: "#ff6a00", // Magenta color
-              }}
-              initial={{ width: 0 }}
-              animate={{ width: `${progress}%` }}
-              transition={{ duration: 0.3, ease: "easeInOut" }}
-            />
+           <motion.div
+  style={{
+    height: "100%",
+    background: "linear-gradient(90deg, #ff6a00, #ee0979)", // Gradient colors
+  }}
+  initial={{ width: 0 }}
+  animate={{ width: `${progress}%` }}
+  transition={{ duration: 0.3, ease: "easeInOut" }}
+/>
+
           </div>
           <motion.span
             style={{ fontSize: "1rem" }}
