@@ -12,6 +12,16 @@ export default function MyWork() {
   const cardsRef = useRef([]);
 
   useEffect(() => {
+  const images = [voltreumImg, icanpeImg, eventsImg, finantaImg, harteImg, homepointImg];
+
+  images.forEach((src) => {
+    const img = new Image();
+    img.src = src;
+  });
+}, []);
+
+
+  useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
