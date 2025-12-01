@@ -201,7 +201,7 @@ export default function AboutMe() {
           }}
         >
           <p>
-            I'm a passionate UI/UX Designer and Developer with over 16 years of experience in building
+            I'm a passionate UI/UX Developer with over 16 years of experience in building
             intuitive, beautiful, and scalable user interfaces. I specialize in crafting digital experiences
             that bridge design with code.
           </p>
