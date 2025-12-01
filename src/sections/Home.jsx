@@ -124,7 +124,7 @@ export default function Home() {
             transform: animate ? "translateY(20px)" : "translateY(20px)",
           }}
         >
-          Hi, I'm Rahul — Product Designer & Developer
+          Hi, I'm Rahul — UI UX Designer
         </h1>
 
         <p
