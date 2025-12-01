@@ -1,13 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import anime from "animejs/lib/anime.es.js";
-import { Helmet } from "react-helmet-async";
 
 
-<Helmet>
-  <title>UI UX Designer Portfolio – Rahul | SaaS & B2B Product Design</title>
-  <meta name="description" content="UI UX designer with 10+ years experience creating SaaS, fintech, and enterprise platforms. View modern case studies built with React." />
-  <meta name="keywords" content="UI UX designer, Product designer, SaaS design, B2B UX, dashboard design, fintech UX" />
-</Helmet>
 
 
 const timelineData = [
