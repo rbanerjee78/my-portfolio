@@ -75,6 +75,16 @@ export default function MyWork() {
 };
 
 
+useEffect(() => {
+  const handleEsc = (e) => {
+    if (e.key === "Escape") setSelectedProject(null);
+  };
+  window.addEventListener("keydown", handleEsc);
+  return () => window.removeEventListener("keydown", handleEsc);
+}, []);
+
+
+
   const projects = [
   {
     title: "Voltreum MDMS",
