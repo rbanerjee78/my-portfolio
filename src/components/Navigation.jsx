@@ -7,7 +7,7 @@ const Navbar = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const links = ["home", "work", "about", "skills", "contact"];
+  const links = ["work", "about", "skills", "contact"];
 
   useEffect(() => {
     const checkScreen = () => setIsMobile(window.innerWidth <= 768);
@@ -69,7 +69,11 @@ const Navbar = () => {
           </button>
         ) : (
           <div style={{ display: "flex", gap: "2rem" }}>
+            <a  className="nav-link"
+ href="https://drive.google.com/file/d/1xxDcNpiFwfkYnAXY9wciB5BPvu-CUVk4/view?usp=drive_link" target="_blank">Download  Resume</a>
+
             {links.map((link) => (
+              
               <a
                 key={link}
                 href={`#${link}`}

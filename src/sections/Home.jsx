@@ -125,6 +125,7 @@ export default function Home() {
           }}
         >
           Hi, I'm Rahul — UI UX Developer
+
         </h1>
 
         <p
@@ -140,6 +141,7 @@ export default function Home() {
           <i>I build thoughtful solutions to real-world problems.</i>
         </p>
 
+      
         <style>
           {`
             @keyframes gradientMove {
