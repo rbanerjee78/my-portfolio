@@ -95,208 +95,230 @@ export default function MyWork() {
     {
       title: "CRM Dashboard",
       description:
-        "A modern CRM dashboard designed to give sales and support teams a clear, real-time view of customers, pipelines, and performance metrics.",
+        "A comprehensive CRM dashboard enabling real-time visualization of customer data, sales pipelines, and performance analytics.",
       image: crmImg,
       link: "https://www.behance.net/gallery/240760129/CRM-Dashboard-UI",
 
-      painPoints: [
-        "Sales teams struggled to get a quick overview of leads, deals, and follow-ups in one place.",
-        "Critical metrics like conversion rates and pipeline health were buried under complex tables.",
-        "Existing CRM dashboards felt cluttered and required too many clicks to access key insights.",
+
+      techStack: [
+        "React.js",
+        "Tailwind CSS",
+        "Recharts",
+        "Redux Toolkit",
+        "Node.js"
       ],
 
-      motivations: [
-        "Create a single, intuitive dashboard for monitoring leads, deals, and customer activity.",
-        "Make sales performance and pipeline status instantly understandable at a glance.",
-        "Help teams take faster action through clear visual hierarchy and data prioritization.",
+      features: [
+        "Interactive data visualization with real-time updates using Recharts.",
+        "Role-based authentication and secure API endpoints.",
+        "Drag-and-drop kanban board for deal management.",
       ],
 
-      research: [
-        "Analyzed workflows of sales managers and account executives to understand daily CRM usage.",
-        "Reviewed popular CRM platforms to identify usability gaps and visual inconsistencies.",
-        "Mapped user journeys from lead creation to deal closure to highlight friction points.",
+      challenges: [
+        "Optimizing rendering performance for large datasets in the data grid.",
+        "Implementing seamless synchronization between local state and the backend.",
+        " Designing a responsive layout that works across various screen sizes.",
       ],
     },
 
-   
     {
       title: "SaaS B2C Job Portal",
       description:
-        "A consumer-focused job portal built as a SaaS platform to connect job seekers with opportunities and streamline the application experience.",
+        "A full-stack job portal connecting candidates with employers, featuring advanced search filtering and application tracking.",
       image: recuitImg,
       link: "https://www.behance.net/gallery/240759113/Saas-B2C-Job-Portal",
 
-      painPoints: [
-        "Job seekers struggled to find relevant opportunities without persistent search and filtering.",
-        "Employers lacked a simple way to post vacancies and track applicant progress.",
-        "Existing portals felt cluttered and overwhelming with inconsistent navigation and UI.",
+
+      techStack: [
+        "Next.js",
+        "MongoDB",
+        "Express",
+        "AWS S3",
+        "Framer Motion"
       ],
 
-      motivations: [
-        "Design a clean and engaging experience tailored for job search and discovery.",
-        "Help users quickly explore, filter, and apply to roles from a single dashboard.",
-        "Empower employers with a simple interface to post and manage job listings efficiently.",
+      features: [
+        "Server-side rendering for SEO-optimized job listings.",
+        "Advanced filtering algorithm with debounce for instant search.",
+        "File upload integration with AWS S3 for resume storage.",
       ],
 
-      research: [
-        "Conducted competitive analysis of leading job portals to identify UX gaps and strong engagement patterns.",
-        "Interviewed job seekers and recruiters to understand pain points in search, application, and tracking workflows.",
-        "Mapped end-to-end user journeys for both candidates and employers to optimize flows and feature priorities.",
+      challenges: [
+        "Handling complex database relationship queries for job matching efficiency.",
+        "Ensuring low latency for search results with millions of records.",
+        "Building a scalable real-time notification system."
       ],
     },
 
     {
       title: "Voltreum MDMS",
       description:
-        "A modern MDMS platform for decentralized energy management.",
+        "A decentralized application (dApp) for peer-to-peer energy trading and monitoring using blockchain technology.",
       image: voltreumImg,
       link: "https://www.behance.net/gallery/230023527/Voltreum-P2P-Energy-Sharing-Platform",
 
-      painPoints: [
-        "Users struggled to understand distributed energy flow across nodes.",
-        "Lack of actionable insights for consumption vs generation balance.",
-        "Legacy MDMS dashboards were too technical and cluttered.",
+
+      techStack: [
+        "React.js",
+        "Web3.js",
+        "Solidity",
+        "Ethereum Testnet",
+        "D3.js"
       ],
 
-      motivations: [
-        "Create an easier way to monitor energy sharing across communities.",
-        "Bring clarity to complex distributed energy models.",
-        "Improve trust by visualising transparent transaction data.",
+      features: [
+        "Smart contract integration for secure energy transactions.",
+        "Real-time grid data visualization using D3.js.",
+        "Wallet connection and transaction signing flows.",
       ],
 
-      research: [
-        "Interviewed 8 grid operators to identify workflow bottlenecks.",
-        "Reviewed 6 global energy-management platforms.",
-        "Mapped end-to-end meter data lifecycle to identify UX gaps.",
+      challenges: [
+        "Managing state consistency between the blockchain and the frontend UI.",
+        "Optimizing gas fees for frequent transaction updates.",
+        "Visualizing complex P2P energy flow graphs intuitively."
       ],
     },
 
     {
       title: "ICanpe Debt Recovery Platform",
       description:
-        "A platform to automate, track, and manage debt recovery campaigns.",
+        "An enterprise-grade platform automating debt recovery workflows with bulk processing and campaign management.",
       image: icanpeImg,
       link: "https://www.behance.net/gallery/203027155/ICanPe-Campaign-Manager",
 
-      painPoints: [
-        "Agents had no unified place to track borrower responses.",
-        "Campaign performance lacked real-time visibility.",
-        "Manual Excel uploads caused delays and mismatches.",
+
+      techStack: [
+        "Vue.js",
+        "Python Django",
+        "PostgreSQL",
+        "Redis",
+        "Docker"
       ],
 
-      motivations: [
-        "Make recovery teams faster via automation.",
-        "Improve borrower segmentation for higher recovery rates.",
-        "Reduce dependency on third-party CRM tools.",
+      features: [
+        "Automated campaign scheduler with SMS/Email integration.",
+        "High-performance data table handling 100k+ rows.",
+        "Real-time analytics dashboard for recovery rates.",
       ],
 
-      research: [
-        "Shadowed 4 collection teams to study call workflows.",
-        "Analyzed data around borrower behavior patterns.",
-        "Benchmarked leading loan recovery tools in India.",
+      challenges: [
+        "Ensuring data security and compliance with financial regulations.",
+        "Handling concurrent bulk upload operations without server timeout.",
+        "Implementing a dynamic rule engine for customized recovery strategies."
       ],
     },
 
     {
       title: "Finanta Lending Platform",
-      description: "Secure and scalable digital lending workflow automation.",
+      description: "A secure fintech application streamlining the digital lending process with automated KYC and credit underwriting.",
       image: finantaImg,
       link: "https://www.behance.net/gallery/210152559/Finanta-Fintech-UXUI-Design",
 
-      painPoints: [
-        "Loan officers struggled with fragmented KYC workflows.",
-        "Underwriting steps were unclear, causing delays.",
-        "Borrowers had difficulty understanding approval stages.",
+
+      techStack: [
+        "Angular",
+        "RxJS",
+        "Spring Boot",
+        "Oracle DB",
+        "Keycloak"
       ],
 
-      motivations: [
-        "Build a transparent multi-step lending journey.",
-        "Improve decision-making speed with a cleaner UI.",
-        "Introduce dashboards to reduce ops workload.",
+      features: [
+        "Multi-step application wizard with state persistence.",
+        "Integrated document verification via third-party APIs.",
+        "Role-based dashboards for applicants and loan officers.",
       ],
 
-      research: [
-        "Mapped the entire loan lifecycle from application to disbursal.",
-        "Interviewed stakeholders from underwriting and credit teams.",
-        "Analyzed RBI compliance flows to align UI with regulations.",
+      challenges: [
+        "Orchestrating complex asynchronous API calls with RxJS.",
+        "Implementing strict form validation and error handling logic.",
+        "Securing sensitive financial data during transit and storage."
       ],
     },
 
     {
       title: "Harte Hanks Website",
       description:
-        "Corporate web revamp with a sleek, modern marketing-first approach.",
+        "A high-performance corporate website re-platformed to improve SEO, load speeds, and content management capability.",
       image: harteImg,
       link: "https://www.hartehanks.com/",
 
-      painPoints: [
-        "Visitors struggled to understand service offerings quickly.",
-        "Navigation hierarchy was confusing with too many pages.",
-        "Brand identity looked outdated and inconsistent.",
+
+      techStack: [
+        "Wordpress Headless",
+        "Gatsby",
+        "GraphQL",
+        "Styled Components",
+        "Netlify"
       ],
 
-      motivations: [
-        "Position Harte Hanks as a modern marketing leader.",
-        "Simplify navigation into clear, outcome-driven content clusters.",
-        "Improve conversion for key services through better CTAs.",
+      features: [
+        "Static site generation (SSG) for blazing fast load times.",
+        "Dynamic content fetching via GraphQL from Headless CMS.",
+        "Custom reusable component library for marketing landing pages.",
       ],
 
-      research: [
-        "Conducted a sitemap audit of 120+ pages.",
-        "Analyzed competitor websites in the enterprise marketing domain.",
-        "Used heatmap insights to restructure hero content.",
+      challenges: [
+        "Migrating thousands of pages of legacy content to the new structure.",
+        "Optimizing images and assets to achieve high Lighthouse scores.",
+        "Implementing complex routing logic for internationalization (i18n)."
       ],
     },
 
     {
       title: "Homepoint Pricing Engine",
       description:
-        "Designed and developed a responsive pricing portal for mortgage officers to simulate loan rates and compare real-time offers.",
+        "A complex financial calculation engine for real-time mortgage rate simulation and offer generation.",
       image: homepointImg,
       link: "https://www.behance.net/gallery/107122111/Pricing-Engine-Project",
 
-      painPoints: [
-        "Loan officers needed faster rate comparison on the go.",
-        "Legacy system required multiple logins and manual calculations.",
-        " borrowers did not understand how rates changed with parameters.",
+
+      techStack: [
+        "React.js",
+        "TypeScript",
+        "C# .NET Core",
+        "SQL Server",
+        "Azure"
       ],
 
-      motivations: [
-        "Give officers a real-time, mobile-friendly pricing engine.",
-        "Enable one-click comparison and PDF generation.",
-        "Reduce time-to-quote drastically.",
+      features: [
+        "Instant rate calculation based on user-input parameters.",
+        "PDF generation of custom quote offers on the client side.",
+        "Real-time integration with market rate APIs.",
       ],
 
-      research: [
-        "Interviewed US-based mortgage officers.",
-        "Analyzed loan pricing APIs and rate adjustment rules.",
-        "Mapped common scenarios like refinancing, purchase, and FHA loans.",
+      challenges: [
+        "Ensuring floating-point precision in financial calculations.",
+        "Managing complex local state with many interdependent variables.",
+        "Reducing API latency for a smooth 'instant quote' experience."
       ],
     },
 
     {
       title: "Event Listing App",
       description:
-        "Built a React-based app to list and manage local events with search, filter, and bookmarking features.",
+        "A progressive web app (PWA) for discovering local events with geolocation support and offline capabilities.",
       image: eventsImg,
       link: "https://www.behance.net/gallery/211052877/Events-App-Concept",
 
-      painPoints: [
-        "Users found it hard to discover local events quickly.",
-        "Most apps lacked good filtering and category clustering.",
-        "Saving and managing bookmarked events was confusing.",
+
+      techStack: [
+        "React Native",
+        "Firebase",
+        "Google Maps API",
+        "Expo"
       ],
 
-      motivations: [
-        "Make event discovery instant through powerful search.",
-        "Build a clean UI for browsing by category or popularity.",
-        "Improve user control with bookmarking and reminders.",
+      features: [
+        "Geolocation-based event recommendations.",
+        "Real-time push notifications for bookmarked events.",
+        "Offline mode support for viewing saved tickets.",
       ],
 
-      research: [
-        "Surveyed 50+ users about event discovery habits.",
-        "Competitive analysis of Eventbrite, BookMyShow, Fever.",
-        "Created usability tests for search + filter flow.",
+      challenges: [
+        "Optimizing map rendering performance on mobile devices.",
+        "Handling location permission flows gracefully across platforms.",
+        "Synchronizing offline data when connectivity is restored."
       ],
     },
   ];
@@ -405,9 +427,11 @@ export default function MyWork() {
                 src={selectedProject.image}
                 alt={selectedProject.title}
                 style={{
-                  width: "400px",
+                  width: "100%",
                   borderRadius: "0.75rem",
                   marginBottom: "1rem",
+                  maxHeight: "350px",
+                  objectFit: "cover"
                 }}
               />
 
@@ -425,39 +449,42 @@ export default function MyWork() {
                 {selectedProject.description}
               </p>
 
-              <a
-                href={selectedProject.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{
-                  display: "inline-block",
-                  padding: "10px 16px",
-                  background: "#2563eb",
-                  color: "white",
-                  borderRadius: "0.5rem",
-                  fontWeight: 600,
-                  textDecoration: "none",
-                }}
-              >
-                View on Behance →
-              </a>
+              <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
+                 <a
+                  href={selectedProject.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    display: "inline-block",
+                    padding: "10px 16px",
+                    background: "#2563eb",
+                    color: "white",
+                    borderRadius: "0.5rem",
+                    fontWeight: 600,
+                    textDecoration: "none",
+                  }}
+                >
+                  View Design →
+                </a>
 
-              <button
-                onClick={() => setSelectedProject(null)}
-                style={{
-                  marginLeft: "1rem",
-                  padding: "10px 16px",
-                  borderRadius: "0.5rem",
-                  background: "#e5e7eb",
-                  border: "none",
-                  cursor: "pointer",
-                }}
-              >
-                Close
-              </button>
+
+
+                <button
+                  onClick={() => setSelectedProject(null)}
+                  style={{
+                    padding: "10px 16px",
+                    borderRadius: "0.5rem",
+                    background: "#e5e7eb",
+                    border: "none",
+                    cursor: "pointer",
+                  }}
+                >
+                  Close
+                </button>
+              </div>
             </div>
 
-            {/* RIGHT — UX Insights Panel */}
+            {/* RIGHT — Technical Details Panel */}
             <div
               style={{
                 flex: "1 1 35%",
@@ -468,48 +495,61 @@ export default function MyWork() {
                 overflowY: "auto",
               }}
             >
-              {/* Pain Points */}
-              <h3 style={{ marginBottom: "0.5rem", fontSize: "1.2rem" }}>
-                🔍 Pain Points
+              {/* Tech Stack */}
+              <h3 style={{ marginBottom: "0.5rem", fontSize: "1.2rem", display: 'flex', alignItems: 'center', gap: '8px' }}>
+                🛠️ Tech Stack
+              </h3>
+              <div
+                style={{
+                  marginBottom: "1.5rem",
+                  display: "flex",
+                  flexWrap: "wrap",
+                  gap: "0.5rem",
+                }}
+              >
+                {selectedProject.techStack?.map((item, i) => (
+                  <span key={i} style={{ 
+                      background: "#eff6ff",
+                      color: "#1d4ed8",
+                      padding: "4px 12px",
+                      borderRadius: "9999px",
+                      fontSize: "0.85rem",
+                      fontWeight: "500"
+                  }}>
+                    {item}
+                  </span>
+                ))}
+              </div>
+
+              {/* Key Features */}
+              <h3 style={{ marginBottom: "0.5rem", fontSize: "1.2rem", display: 'flex', alignItems: 'center', gap: '8px' }}>
+                🚀 Key Features
               </h3>
               <ul
                 style={{
                   marginBottom: "1.5rem",
                   color: "#4b5563",
                   lineHeight: "1.55",
+                  paddingLeft: "1.2rem"
                 }}
               >
-                {selectedProject.painPoints?.map((item, i) => (
+                {selectedProject.features?.map((item, i) => (
                   <li key={i} style={{ marginBottom: "0.4rem" }}>
                     {item}
                   </li>
                 ))}
               </ul>
 
-              {/* Motivations */}
-              <h3 style={{ marginBottom: "0.5rem", fontSize: "1.2rem" }}>
-                🎯 Motivations
+              {/* Technical Challenges */}
+              <h3 style={{ marginBottom: "0.5rem", fontSize: "1.2rem", display: 'flex', alignItems: 'center', gap: '8px' }}>
+                ⚡ Challenges & Solutions
               </h3>
-              <ul
-                style={{
-                  marginBottom: "1.5rem",
-                  color: "#4b5563",
+              <ul style={{ 
+                  color: "#4b5563", 
                   lineHeight: "1.55",
-                }}
-              >
-                {selectedProject.motivations?.map((item, i) => (
-                  <li key={i} style={{ marginBottom: "0.4rem" }}>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-
-              {/* Research */}
-              <h3 style={{ marginBottom: "0.5rem", fontSize: "1.2rem" }}>
-                🧪 Research
-              </h3>
-              <ul style={{ color: "#4b5563", lineHeight: "1.55" }}>
-                {selectedProject.research?.map((item, i) => (
+                  paddingLeft: "1.2rem"
+              }}>
+                {selectedProject.challenges?.map((item, i) => (
                   <li key={i} style={{ marginBottom: "0.4rem" }}>
                     {item}
                   </li>
