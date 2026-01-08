@@ -7,67 +7,67 @@ import anime from "animejs/lib/anime.es.js";
 const timelineData = [
   {
     type: "experience",
-    title: "UI UX Designer",
+    title: "Senior Frontend Developer",
     company: "411Locals",
     duration: "Sep 2024 – June 2025",
     description:
-      "Created Landing Pages, optimized them for conversion. Created React Based Websites, and improved user experience across multiple projects.",
+      "Developed high-conversion landing pages and React-based web applications, focusing on performance, component reusability, and seamless user experiences.",
   },
   {
     type: "experience",
-    title: "UI UX Developer",
+    title: "UI Developer",
     company: "Voltreum",
     duration: "Jan 2023 – Aug 2024",
     description:
-      "Created user facing features for MDMS, a platform for managing smart meters. Developed user interfaces for various web applications, focusing on usability and performance.",
+      "Built complex user-facing features for MDMS platforms using React.js. Optimized web application performance and ensured cross-browser compatibility.",
   },
   {
     type: "experience",
-    title: "Senior UI/UX Designer",
+    title: "Senior UI Developer",
     company: "ICanPe Pvt Ltd",
     duration: "Oct 2021 – Dec 2022",
     description:
-      "Led end-to-end design for a debt recovery platform, introduced campaign tracking, and improved borrower engagement.",
+      "Led the frontend implementation of a debt recovery platform. Integrated campaign tracking analytics and improved engagement through responsive UI design.",
   },
   {
     type: "experience",
-    title: "UI/UX Design Freelancer",
+    title: "Frontend Developer (Freelance)",
     company: "Rankiteo",
     duration: "Oct 2020 – Oct 2021",
     description:
-      "Created interfaces for cybersecurity products, focusing on user-friendly designs and enhancing user experience.",
+      "Developed secure interfaces for cybersecurity products. Implemented responsive designs and enhanced application usability using modern JS frameworks.",
   },
   {
     type: "experience",
-    title: "Senior UI/UX Designer",
+    title: "Senior Frontend Developer",
     company: "Assimilate Solutions",
     duration: "Feb 2019 – Sep 2020",
     description:
-      "Created interfaces for cybersecurity products, focusing on user-friendly designs and enhancing user experience.",
+      "Architected interfaces for cybersecurity products, focusing on robust frontend performance and user-centric design principles.",
   },
     {
     type: "experience",
-    title: "Senior UI/UX Developer",
+    title: "UI Engineer",
     company: "Walker Digital",
     duration: "Jan 2017 – Sep 2018",
     description:
-      "Created interfaces for casino management software, concentrating on user-friendly designs and enhancing user experience.",
+      "Engineered interfaces for casino management software. Focused on creating intuitive, high-performance designs using advanced CSS and JavaScript.",
   },
    {
     type: "experience",
-    title: "Senior UI/UX Developer",
+    title: "Frontend Developer",
     company: "WebVirtue Technology",
     duration: "Jan 2016 – Sep 2016",
     description:
-      "Created interfaces for ecommerce catalog management software, focusing on user-friendly designs and enhancing user experience.",
+      "Developed interfaces for e-commerce catalog management, ensuring responsive layouts and optimized user flows.",
   },
    {
     type: "experience",
-    title: "Senior UI/UX Designer",
+    title: "Web Developer",
     company: "TrilaSoft Solutions",
     duration: "Nov 2008 – Dec 2016",
     description:
-      "Created interfaces for Logistics and Supply Chain Management software, focusing on user-friendly designs and enhancing user experience.",
+      "Designed and developed interfaces for Logistics and Supply Chain software, focusing on standards-compliant HTML/CSS and efficient UI implementation.",
   },
   {
     type: "education",

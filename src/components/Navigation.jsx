@@ -70,7 +70,7 @@ const Navbar = () => {
         ) : (
           <div style={{ display: "flex", gap: "2rem" }}>
             <a  className="nav-link"
- href="https://drive.google.com/file/d/1xxDcNpiFwfkYnAXY9wciB5BPvu-CUVk4/view?usp=drive_link" target="_blank">Download  Resume</a>
+ href="https://docs.google.com/document/d/1I-5S6lMQMqSjo3_C-1XGxdCsPOhpWxNp/edit?usp=sharing&ouid=107725461042665169358&rtpof=true&sd=true" target="_blank">Download  Resume</a>
 
             {links.map((link) => (
               
